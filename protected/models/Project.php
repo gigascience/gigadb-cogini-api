@@ -70,8 +70,8 @@ class Project extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'url' => 'Url',
-			'name' => 'Name',
+			'url' => 'Project URL',
+			'name' => 'Project Name',
 			'image_location' => 'Image Location',
 		);
 	}

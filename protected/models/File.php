@@ -83,20 +83,20 @@ class File extends MyActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
+			'id' => 'File ID',
 			'dataset_id' => 'Dataset',
 			'name' => Yii::t('app' , 'File Name'),
-			'location' => 'Location',
-			'extension' => 'Extension',
+			'location' => 'File Location',
+			'extension' => 'File Extension',
 			'size' => Yii::t('app' , 'Size'),
-			'description' => 'Description',
+			'description' => 'File Description',
 			'date_stamp' => Yii::t('app' , 'Release Date'),
 			'format_id' => Yii::t('app' , 'File Format'),
 			'type_id' => Yii::t('app' , 'File Type'),
 			'code' => Yii::t('app' , 'Sample ID') ,
-      'doi_search' => 'DOI',
-      'format_search' => 'File Format',
-      'type_search' => 'File Type'
+                        'doi_search' => 'DOI',
+                        'format_search' => 'File Format',
+                        'type_search' => 'File Type'
 		);
 	}
 

@@ -1,13 +1,10 @@
 <?php header("Content-type: text/xml"); ?>
 <?php echo '<?xml version="1.0" encoding="UTF-8"?>'; ?>
-<?php echo "<root>"; ?>
 <?php 
+    echo "<root>";
     echo "<Datasets TotalDatasets='".count($models)."'>";
     foreach ($models as $model){
         echo "<Dataset>";       
-        echo "<".CHtml::encode($model->getAttributeLabel('id')).">"; 
-        echo CHtml::encode($model->id);
-        echo "</".CHtml::encode($model->getAttributeLabel('id')).">"; 
 
         echo "<".CHtml::encode($model->getAttributeLabel('identifier')).">"; 
         echo CHtml::encode($model->identifier);
@@ -114,7 +111,8 @@
             echo CHtml::encode($file->extension);
             echo "</".str_replace(" ", "", CHtml::encode($file->getAttributeLabel('extension'))).">";         
             echo "<".str_replace(" ", "", CHtml::encode($file->getAttributeLabel('size'))).">";
-            echo CHtml::encode($file->size);
+            //echo CHtml::encode($file->size);
+            echo CHtml::encode(File::staticBytesToSize($file->size));
             echo "</".str_replace(" ", "", CHtml::encode($file->getAttributeLabel('size'))).">";         
             echo "<".str_replace(" ", "", CHtml::encode($file->getAttributeLabel('description'))).">";
             echo CHtml::encode($file->description);
@@ -139,5 +137,5 @@
         echo "</Dataset>";
     }
     echo "</Datasets>";
+    echo "</root>";
 ?>
-<?php echo "</root>"; ?>

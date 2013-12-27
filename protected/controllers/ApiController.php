@@ -39,6 +39,9 @@ class ApiController extends Controller
         // Get the respective model instance
         switch($_GET['model'])
         {
+            case 'file':
+                $models = File::model()->findAll();
+                break;
             case 'dataset':
                 $models = Dataset::model()->findAll();
                 break;
@@ -67,6 +70,9 @@ class ApiController extends Controller
             if($_GET['model']=='dataset'){         
                 $this->renderPartial('view_datasets',array('models'=>$models));
             }
+            elseif($_GET['model']=='file'){
+                $this->renderPartial('view_files',array('models'=>$models));
+            }
             elseif($_GET['model']=='sample'){
                 $this->renderPartial('view_samples',array('models'=>$models));
             }
@@ -81,7 +87,11 @@ class ApiController extends Controller
 
         switch($_GET['model'])
         {
-            // Find respective model    
+            // Find respective model  
+            case 'file':
+                $model = File::model()->with('dataset')->findAll(array('condition'=>'identifier=:identifier','params'=>array(':identifier'=>$_GET['id'])));    
+                //$model = File::model()->with('dataset')->findByAttributes(array('identifier'=>$_GET['id']));
+                break;
             case 'dataset':
                 //$model = Dataset::model()->with('authors')->findByPk($_GET['id']);
                 $model = Dataset::model()->with('authors')->findByAttributes(array('identifier'=>$_GET['id']));
@@ -98,6 +108,10 @@ class ApiController extends Controller
         // Did we find the requested model? If not, raise an error
         if(is_null($model))
             $this->_sendResponse(404, 'No Item found with id '.$_GET['id']);
+        elseif($_GET['model']=='file'){
+            //$this->_sendResponse(200, CJSON::encode($model));            
+            $this->renderPartial('view_files',array('model'=>$model));
+        }
         elseif($_GET['model']=='dataset'){
             //$this->_sendResponse(200, CJSON::encode($model));            
             $this->renderPartial('view',array('model'=>$model));

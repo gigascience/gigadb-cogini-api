@@ -101,11 +101,12 @@ return CMap::mergeArray(array(
         'log'=>array(
             'class'=>'CLogRouter',
             'routes'=>array(
+                   
                 array(
                     'class'=>'CFileLogRoute',
                     'levels'=>'error, warning, info, debug',
                 ),
-                /*
+             /*
                 array(
                     'class'=>'CWebLogRoute',
                 ),

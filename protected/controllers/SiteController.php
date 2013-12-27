@@ -155,6 +155,10 @@ class SiteController extends Controller {
 	public function actionAbout() {
 		$this->render('about');
 	}
+        
+        public function actionApi() {
+		$this->render('api');
+	}
 
 	public function actionTerm() {
 		$this->render('term');
