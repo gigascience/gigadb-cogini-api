@@ -99,7 +99,11 @@ $this->pageTitle="GigaDB Dataset - DOI 10.5524/".$model->identifier." - ".$title
                 }
 
                 foreach ($types as $typeName => $value) {
-                    $typeNameLabel = preg_replace('/(?:^|_)(.?)/e',"strtoupper('$1')",$typeName);
+                   // $typeNameLabel = preg_replace('/(?:^|_)(.?)/e',"strtoupper('$1')",$typeName);
+                    $typeNameLabel=pre_replace_callback('/(?:^|_)(.?)/',
+                            function($matches){$string=$matches[1];
+                            return strtoupper($string);
+                            },$typeName);
                     $typeNameLabel = preg_replace('/(?<=\\w)(?=[A-Z])/'," $1", $typeNameLabel);
                     $typeNameLabel = trim($typeNameLabel);
 

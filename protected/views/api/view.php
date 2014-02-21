@@ -1,8 +1,7 @@
 <?php header("Content-type: text/xml"); ?>
 <?php echo '<?xml version="1.0" encoding="UTF-8"?>'; ?>
-<?php echo '<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:noNamespaceSchemaLocation="xmlschema.xsd">'; ?>
 <?php 
+    echo '<root>'; 
     echo "<Dataset>";
     echo "<".CHtml::encode($model->getAttributeLabel('identifier')).">"; 
     echo CHtml::encode($model->identifier);
