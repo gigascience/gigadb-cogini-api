@@ -1,6 +1,5 @@
 <?php header("Content-type: text/xml"); ?>
 <?php echo '<?xml version="1.0" encoding="UTF-8"?>'; ?>
-<?php echo "<root>"; ?>
 <?php
         echo "<Sample>";
         echo "<".str_replace(" ", "", CHtml::encode($model->getAttributeLabel('species_id'))).">";
@@ -26,4 +25,3 @@
         echo "</".str_replace(" ", "", CHtml::encode($model->species->getAttributeLabel('tax_id'))).">"; 
         echo "</Sample>";      
 ?>
-<?php echo "</root>"; ?>

@@ -1,6 +1,5 @@
 <?php header("Content-type: text/xml"); ?>
 <?php echo '<?xml version="1.0" encoding="UTF-8"?>'; ?>
-<?php echo "<root>"; ?>
 <?php 
         echo "<Files TotalFiles='".count($model)."'>";
         foreach ($model as $file) {
@@ -24,4 +23,3 @@
         }
         echo "</Files>";    
 ?>
-<?php echo "</root>"; ?>

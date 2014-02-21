@@ -1,6 +1,5 @@
 <?php header("Content-type: text/xml"); ?>
 <?php echo '<?xml version="1.0" encoding="UTF-8"?>'; ?>
-<?php echo "<root>"; ?>
 <?php 
     echo "<File>";
     echo "<".str_replace(" ", "", CHtml::encode($model->getAttributeLabel('name'))).">";
@@ -20,4 +19,3 @@
     echo "</".str_replace(" ", "", CHtml::encode($model->getAttributeLabel('description'))).">";         
     echo "</File>";   
 ?>
-<?php echo "</root>"; ?>
