@@ -9873,3 +9873,971 @@ REQUEST_URI=/
 in /var/www/hosts/gigadb.cogini.com/htdocs/protected/views/dataset/view.php (222)
 in /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/DatasetController.php (140)
 in /var/www/hosts/gigadb.cogini.com/htdocs/index.php (15)
+2014/02/25 15:31:15 [error] [php] Undefined variable: model (/var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_files.php:4)
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(870): ApiController->renderFile()
+#1 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(74): ApiController->renderPartial()
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionList()
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): ApiController->runAction()
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CWebApplication->run()
+REQUEST_URI=/api/file
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_files.php (4)
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php (74)
+in /var/www/hosts/gigadb.cogini.com/htdocs/index.php (15)
+2014/02/26 13:25:07 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[08006] [7] could not connect to server: Connection refused
+	Is the server running on host "localhost" (::1) and accepting
+	TCP/IP connections on port 5432?
+could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?' in /var/www/hosts/gigadb.cogini.com/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /var/www/hosts/gigadb.cogini.com/yii/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CModule.php(388): CDbConnection->init()
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CDbHttpSession.php(154): CModule->getComponent('db')
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CDbHttpSession.php(178): CDbHttpSession->getDbConnection()
+#5 [internal function]: CDbHttpSession->openSession('/var/lib/php/se...', 'PHPSESSID')
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CHttpSession.php(115): session_start()
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CHttpSession.php(89): CHttpSession->open()
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CModule.php(388): CHttpSession->init()
+#9 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CModule.php(104): CModule->getComponent('session')
+#10 /var/www/hosts/gigadb.cogini.com/htdocs/protected/components/Controller.php(50): CModule->__get('session')
+#11 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(275): Controller->init()
+#12 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('')
+#13 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#14 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CApplication->run()
+#15 {main}
+REQUEST_URI=/
+---
+2014/02/26 13:25:37 [debug] [application]     .... 
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/views/dataset/view.php (222)
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/DatasetController.php (140)
+in /var/www/hosts/gigadb.cogini.com/htdocs/index.php (15)
+2014/02/26 13:48:35 [error] [php] Undefined index: name (/var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php:101)
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): ApiController->runAction()
+#1 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#5 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CWebApplication->run()
+REQUEST_URI=/api/sample/34
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php (101)
+in /var/www/hosts/gigadb.cogini.com/htdocs/index.php (15)
+2014/02/26 14:02:00 [error] [php] Undefined index: name (/var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php:101)
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): ApiController->runAction()
+#1 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#5 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CWebApplication->run()
+REQUEST_URI=/api/sample/23
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php (101)
+in /var/www/hosts/gigadb.cogini.com/htdocs/index.php (15)
+2014/02/26 14:11:25 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "dataset_sample,sample,species" is not defined in active record class "Dataset".' in /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveFinder.php:215
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveFinder.php(310): CActiveFinder->buildJoinTree(Object(CJoinElement), 'dataset_sample,...')
+#1 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveFinder.php(49): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveRecord.php(1291): CActiveFinder->__construct(Object(Dataset), Array)
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#4 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(101): CActiveRecord->findAll(Array)
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionView()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): CController->run('view')
+#10 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('api/view')
+#11 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CApplication->run()
+#13 {main}
+REQUEST_URI=/api/sample/23
+---
+2014/02/26 14:11:34 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "dataset_sample,sample,species" is not defined in active record class "Dataset".' in /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveFinder.php:215
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveFinder.php(310): CActiveFinder->buildJoinTree(Object(CJoinElement), 'dataset_sample,...')
+#1 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveFinder.php(49): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveRecord.php(1291): CActiveFinder->__construct(Object(Dataset), Array)
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#4 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(101): CActiveRecord->findAll(Array)
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionView()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): CController->run('view')
+#10 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('api/view')
+#11 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CApplication->run()
+#13 {main}
+REQUEST_URI=/api/sample/23
+---
+2014/02/26 14:14:21 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "dataset_sample,sample,species" is not defined in active record class "Sample".' in /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveFinder.php:215
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveFinder.php(310): CActiveFinder->buildJoinTree(Object(CJoinElement), 'dataset_sample,...')
+#1 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveFinder.php(49): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveRecord.php(1291): CActiveFinder->__construct(Object(Sample), Array)
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#4 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(101): CActiveRecord->findAll(Array)
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionView()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): CController->run('view')
+#10 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('api/view')
+#11 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CApplication->run()
+#13 {main}
+REQUEST_URI=/api/sample/23
+---
+2014/02/26 14:14:25 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "dataset_sample,sample,species" is not defined in active record class "Sample".' in /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveFinder.php:215
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveFinder.php(310): CActiveFinder->buildJoinTree(Object(CJoinElement), 'dataset_sample,...')
+#1 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveFinder.php(49): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveRecord.php(1291): CActiveFinder->__construct(Object(Sample), Array)
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#4 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(101): CActiveRecord->findAll(Array)
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionView()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): CController->run('view')
+#10 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('api/view')
+#11 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CApplication->run()
+#13 {main}
+REQUEST_URI=/api/sample/23
+---
+2014/02/26 14:14:37 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "dataset_sample,sample,species" is not defined in active record class "Sample".' in /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveFinder.php:215
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveFinder.php(310): CActiveFinder->buildJoinTree(Object(CJoinElement), 'dataset_sample,...')
+#1 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveFinder.php(49): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveRecord.php(1291): CActiveFinder->__construct(Object(Sample), Array)
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#4 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(101): CActiveRecord->findAll(Array)
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionView()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): CController->run('view')
+#10 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('api/view')
+#11 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CApplication->run()
+#13 {main}
+REQUEST_URI=/api/sample/23
+---
+2014/02/26 14:14:40 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "dataset_sample,sample,species" is not defined in active record class "Sample".' in /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveFinder.php:215
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveFinder.php(310): CActiveFinder->buildJoinTree(Object(CJoinElement), 'dataset_sample,...')
+#1 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveFinder.php(49): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveRecord.php(1291): CActiveFinder->__construct(Object(Sample), Array)
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#4 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(101): CActiveRecord->findAll(Array)
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionView()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): CController->run('view')
+#10 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('api/view')
+#11 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CApplication->run()
+#13 {main}
+REQUEST_URI=/api/sample/23
+---
+2014/02/26 14:16:03 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "datasetSamples,species,datasets" is not defined in active record class "Sample".' in /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveFinder.php:215
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveFinder.php(310): CActiveFinder->buildJoinTree(Object(CJoinElement), 'datasetSamples,...')
+#1 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveFinder.php(49): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveRecord.php(1291): CActiveFinder->__construct(Object(Sample), Array)
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#4 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(101): CActiveRecord->findAll(Array)
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionView()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): CController->run('view')
+#10 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('api/view')
+#11 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CApplication->run()
+#13 {main}
+REQUEST_URI=/api/sample/23
+---
+2014/02/26 14:16:09 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "datasetSamples,species,datasets" is not defined in active record class "Sample".' in /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveFinder.php:215
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveFinder.php(310): CActiveFinder->buildJoinTree(Object(CJoinElement), 'datasetSamples,...')
+#1 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveFinder.php(49): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveRecord.php(1291): CActiveFinder->__construct(Object(Sample), Array)
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#4 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(101): CActiveRecord->findAll(Array)
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionView()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): CController->run('view')
+#10 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('api/view')
+#11 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CApplication->run()
+#13 {main}
+REQUEST_URI=/api/sample/23
+---
+2014/02/26 14:16:22 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "datasetSamples,species,datasets" is not defined in active record class "Sample".' in /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveFinder.php:215
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveFinder.php(310): CActiveFinder->buildJoinTree(Object(CJoinElement), 'datasetSamples,...')
+#1 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveFinder.php(49): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveRecord.php(1291): CActiveFinder->__construct(Object(Sample), Array)
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#4 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(101): CActiveRecord->findAll(Array)
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionView()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): CController->run('view')
+#10 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('api/view')
+#11 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CApplication->run()
+#13 {main}
+REQUEST_URI=/api/sample/23
+---
+2014/02/26 14:27:24 [error] [php] Undefined index: id (/var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php:132)
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): ApiController->runAction()
+#1 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#5 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CWebApplication->run()
+REQUEST_URI=/api/sample/Pan
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php (132)
+in /var/www/hosts/gigadb.cogini.com/htdocs/index.php (15)
+2014/02/26 14:27:52 [error] [exception.CException] exception 'CException' with message 'Property "Sample.identifier" is not defined.' in /var/www/hosts/gigadb.cogini.com/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('identifier')
+#1 /var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_datasets.php(9): CActiveRecord->__get('identifier')
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CBaseController.php(127): require('/var/www/hosts/...')
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/hosts/...', Array, true)
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(870): CBaseController->renderFile('/var/www/hosts/...', Array, true)
+#5 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(148): CController->renderPartial('view_datasets', Array)
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionSample()
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#9 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): CController->run('sample')
+#11 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('api/sample')
+#12 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CApplication->run()
+#14 {main}
+REQUEST_URI=/api/sample/Pan
+---
+2014/02/26 14:29:42 [error] [php] Undefined variable: model (/var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_sample.php:5)
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(870): ApiController->renderFile()
+#1 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(148): ApiController->renderPartial()
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionSample()
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): ApiController->runAction()
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CWebApplication->run()
+REQUEST_URI=/api/sample/Triticum
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_sample.php (5)
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php (148)
+in /var/www/hosts/gigadb.cogini.com/htdocs/index.php (15)
+2014/02/26 14:30:06 [error] [exception.CException] exception 'CException' with message 'Property "Sample.identifier" is not defined.' in /var/www/hosts/gigadb.cogini.com/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('identifier')
+#1 /var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_datasets.php(9): CActiveRecord->__get('identifier')
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CBaseController.php(127): require('/var/www/hosts/...')
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/hosts/...', Array, true)
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(870): CBaseController->renderFile('/var/www/hosts/...', Array, true)
+#5 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(148): CController->renderPartial('view_datasets', Array)
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionSample()
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#9 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): CController->run('sample')
+#11 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('api/sample')
+#12 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CApplication->run()
+#14 {main}
+REQUEST_URI=/api/sample/Triticum
+---
+2014/02/26 14:39:14 [error] [exception.CException] exception 'CException' with message 'Property "Sample.dataset" is not defined.' in /var/www/hosts/gigadb.cogini.com/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('dataset')
+#1 /var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php(28): CActiveRecord->__get('dataset')
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CBaseController.php(127): require('/var/www/hosts/...')
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/hosts/...', Array, true)
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(870): CBaseController->renderFile('/var/www/hosts/...', Array, true)
+#5 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(148): CController->renderPartial('view_samples_do...', Array)
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionSample()
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#9 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): CController->run('sample')
+#11 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('api/sample')
+#12 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CApplication->run()
+#14 {main}
+REQUEST_URI=/api/sample/Triticum
+---
+2014/02/26 14:40:45 [error] [exception.CException] exception 'CException' with message 'Property "Sample.datasetSample" is not defined.' in /var/www/hosts/gigadb.cogini.com/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('datasetSample')
+#1 /var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php(28): CActiveRecord->__get('datasetSample')
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CBaseController.php(127): require('/var/www/hosts/...')
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/hosts/...', Array, true)
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(870): CBaseController->renderFile('/var/www/hosts/...', Array, true)
+#5 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(148): CController->renderPartial('view_samples_do...', Array)
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionSample()
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#9 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): CController->run('sample')
+#11 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('api/sample')
+#12 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CApplication->run()
+#14 {main}
+REQUEST_URI=/api/sample/Triticum
+---
+2014/02/26 14:41:11 [error] [php] Trying to get property of non-object (/var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php:28)
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(870): ApiController->renderFile()
+#1 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(148): ApiController->renderPartial()
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionSample()
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): ApiController->runAction()
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CWebApplication->run()
+REQUEST_URI=/api/sample/Triticum
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php (28)
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php (148)
+in /var/www/hosts/gigadb.cogini.com/htdocs/index.php (15)
+2014/02/26 14:53:58 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "species" is not defined in active record class "Dataset".' in /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveFinder.php:215
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveFinder.php(310): CActiveFinder->buildJoinTree(Object(CJoinElement), 'species')
+#1 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveFinder.php(49): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveRecord.php(1291): CActiveFinder->__construct(Object(Dataset), Array)
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#4 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(133): CActiveRecord->findAll(Array)
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionSample()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): CController->run('sample')
+#10 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('api/sample')
+#11 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CApplication->run()
+#13 {main}
+REQUEST_URI=/api/sample/Triti
+---
+2014/02/26 14:54:19 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "species" is not defined in active record class "Dataset".' in /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveFinder.php:215
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveFinder.php(310): CActiveFinder->buildJoinTree(Object(CJoinElement), 'species')
+#1 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveFinder.php(49): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveRecord.php(1291): CActiveFinder->__construct(Object(Dataset), Array)
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#4 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(133): CActiveRecord->findAll(Array)
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionSample()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): CController->run('sample')
+#10 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('api/sample')
+#11 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CApplication->run()
+#13 {main}
+REQUEST_URI=/api/sample/Triti
+---
+2014/02/26 14:54:21 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "species" is not defined in active record class "Dataset".' in /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveFinder.php:215
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveFinder.php(310): CActiveFinder->buildJoinTree(Object(CJoinElement), 'species')
+#1 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveFinder.php(49): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveRecord.php(1291): CActiveFinder->__construct(Object(Dataset), Array)
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#4 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(133): CActiveRecord->findAll(Array)
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionSample()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): CController->run('sample')
+#10 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('api/sample')
+#11 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CApplication->run()
+#13 {main}
+REQUEST_URI=/api/sample/Triti
+---
+2014/02/26 14:58:57 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42703]: Undefined column: 7 ERROR:  column "scientific_name" does not exist
+LINE 1: ...s"."id"="datasets_datasets"."dataset_id")  WHERE (scientific...
+                                                             ^. The SQL statement executed was: SELECT "t"."id" AS "t0_c0", "t"."species_id" AS "t0_c1", "t"."s_attrs" AS "t0_c2", "t"."code" AS "t0_c3", "datasets"."id" AS "t1_c0", "datasets"."submitter_id" AS "t1_c1", "datasets"."image_id" AS "t1_c2", "datasets"."identifier" AS "t1_c3", "datasets"."title" AS "t1_c4", "datasets"."description" AS "t1_c5", "datasets"."dataset_size" AS "t1_c6", "datasets"."ftp_site" AS "t1_c7", "datasets"."upload_status" AS "t1_c8", "datasets"."excelfile" AS "t1_c9", "datasets"."excelfile_md5" AS "t1_c10", "datasets"."publication_date" AS "t1_c11", "datasets"."modification_date" AS "t1_c12", "datasets"."publisher_id" AS "t1_c13", "datasets"."token" AS "t1_c14" FROM "sample" "t"  LEFT OUTER JOIN "dataset_sample" "datasets_datasets" ON ("t"."id"="datasets_datasets"."sample_id") LEFT OUTER JOIN "dataset" "datasets" ON ("datasets"."id"="datasets_datasets"."dataset_id")  WHERE (scientific_name like :name). Bound with :name='%Triti%'.
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php (132)
+in /var/www/hosts/gigadb.cogini.com/htdocs/index.php (15)
+2014/02/26 14:58:57 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42703]: Undefined column: 7 ERROR:  column "scientific_name" does not exist
+LINE 1: ...s"."id"="datasets_datasets"."dataset_id")  WHERE (scientific...
+                                                             ^. The SQL statement executed was: SELECT "t"."id" AS "t0_c0", "t"."species_id" AS "t0_c1", "t"."s_attrs" AS "t0_c2", "t"."code" AS "t0_c3", "datasets"."id" AS "t1_c0", "datasets"."submitter_id" AS "t1_c1", "datasets"."image_id" AS "t1_c2", "datasets"."identifier" AS "t1_c3", "datasets"."title" AS "t1_c4", "datasets"."description" AS "t1_c5", "datasets"."dataset_size" AS "t1_c6", "datasets"."ftp_site" AS "t1_c7", "datasets"."upload_status" AS "t1_c8", "datasets"."excelfile" AS "t1_c9", "datasets"."excelfile_md5" AS "t1_c10", "datasets"."publication_date" AS "t1_c11", "datasets"."modification_date" AS "t1_c12", "datasets"."publisher_id" AS "t1_c13", "datasets"."token" AS "t1_c14" FROM "sample" "t"  LEFT OUTER JOIN "dataset_sample" "datasets_datasets" ON ("t"."id"="datasets_datasets"."sample_id") LEFT OUTER JOIN "dataset" "datasets" ON ("datasets"."id"="datasets_datasets"."dataset_id")  WHERE (scientific_name like :name). Bound with :name='%Triti%'' in /var/www/hosts/gigadb.cogini.com/yii/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveFinder.php(818): CDbCommand->queryAll()
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveFinder.php(452): CJoinElement->runQuery(Object(CJoinQuery))
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveFinder.php(70): CJoinElement->find(Object(CDbCriteria))
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveRecord.php(1292): CActiveFinder->query(Object(CDbCriteria), true)
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#6 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(132): CActiveRecord->findAll(Array)
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionSample()
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#9 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#10 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): CController->run('sample')
+#12 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('api/sample')
+#13 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#14 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CApplication->run()
+#15 {main}
+REQUEST_URI=/api/sample/Triti
+---
+2014/02/26 15:05:16 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42703]: Undefined column: 7 ERROR:  column "scientific_name" does not exist
+LINE 1: SELECT * FROM "sample" "t" WHERE scientific_name like $1
+                                         ^. The SQL statement executed was: SELECT * FROM "sample" "t" WHERE scientific_name like :name. Bound with :name='%Triti%'.
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php (132)
+in /var/www/hosts/gigadb.cogini.com/htdocs/index.php (15)
+2014/02/26 15:05:16 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42703]: Undefined column: 7 ERROR:  column "scientific_name" does not exist
+LINE 1: SELECT * FROM "sample" "t" WHERE scientific_name like $1
+                                         ^. The SQL statement executed was: SELECT * FROM "sample" "t" WHERE scientific_name like :name. Bound with :name='%Triti%'' in /var/www/hosts/gigadb.cogini.com/yii/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveRecord.php(1287): CDbCommand->queryAll()
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/db/ar/CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(132): CActiveRecord->findAll(Array)
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionSample()
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): CController->run('sample')
+#9 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('api/sample')
+#10 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CApplication->run()
+#12 {main}
+REQUEST_URI=/api/sample/Triti
+---
+2014/02/26 15:06:53 [error] [php] Trying to get property of non-object (/var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php:11)
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(870): ApiController->renderFile()
+#1 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(148): ApiController->renderPartial()
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionSample()
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): ApiController->runAction()
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CWebApplication->run()
+REQUEST_URI=/api/sample/Triti
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php (11)
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php (148)
+in /var/www/hosts/gigadb.cogini.com/htdocs/index.php (15)
+2014/02/26 15:07:07 [error] [php] Trying to get property of non-object (/var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php:11)
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(870): ApiController->renderFile()
+#1 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(148): ApiController->renderPartial()
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionSample()
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): ApiController->runAction()
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CWebApplication->run()
+REQUEST_URI=/api/sample/Triti
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php (11)
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php (148)
+in /var/www/hosts/gigadb.cogini.com/htdocs/index.php (15)
+2014/02/26 15:07:09 [error] [php] Trying to get property of non-object (/var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php:11)
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(870): ApiController->renderFile()
+#1 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(148): ApiController->renderPartial()
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionSample()
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): ApiController->runAction()
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CWebApplication->run()
+REQUEST_URI=/api/sample/Triti
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php (11)
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php (148)
+in /var/www/hosts/gigadb.cogini.com/htdocs/index.php (15)
+2014/02/26 15:08:36 [error] [php] Trying to get property of non-object (/var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php:11)
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(870): ApiController->renderFile()
+#1 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(148): ApiController->renderPartial()
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionSample()
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): ApiController->runAction()
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CWebApplication->run()
+REQUEST_URI=/api/sample/Triti
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php (11)
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php (148)
+in /var/www/hosts/gigadb.cogini.com/htdocs/index.php (15)
+2014/02/26 15:08:37 [error] [php] Trying to get property of non-object (/var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php:11)
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(870): ApiController->renderFile()
+#1 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(148): ApiController->renderPartial()
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionSample()
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): ApiController->runAction()
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CWebApplication->run()
+REQUEST_URI=/api/sample/Triti
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php (11)
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php (148)
+in /var/www/hosts/gigadb.cogini.com/htdocs/index.php (15)
+2014/02/26 15:11:27 [error] [php] Trying to get property of non-object (/var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php:11)
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(870): ApiController->renderFile()
+#1 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(148): ApiController->renderPartial()
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionSample()
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): ApiController->runAction()
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CWebApplication->run()
+REQUEST_URI=/api/sample/Triti
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php (11)
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php (148)
+in /var/www/hosts/gigadb.cogini.com/htdocs/index.php (15)
+2014/02/26 15:11:28 [error] [php] Trying to get property of non-object (/var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php:11)
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(870): ApiController->renderFile()
+#1 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(148): ApiController->renderPartial()
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionSample()
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): ApiController->runAction()
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CWebApplication->run()
+REQUEST_URI=/api/sample/Triti
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php (11)
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php (148)
+in /var/www/hosts/gigadb.cogini.com/htdocs/index.php (15)
+2014/02/26 15:11:29 [error] [php] Trying to get property of non-object (/var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php:11)
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(870): ApiController->renderFile()
+#1 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(148): ApiController->renderPartial()
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionSample()
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): ApiController->runAction()
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CWebApplication->run()
+REQUEST_URI=/api/sample/Triti
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php (11)
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php (148)
+in /var/www/hosts/gigadb.cogini.com/htdocs/index.php (15)
+2014/02/26 15:11:43 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (/var/www/hosts/gigadb.cogini.com/yii/framework/web/helpers/CHtml.php:85)
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CBaseController.php(127): require()
+#1 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CBaseController.php(96): ApiController->renderInternal()
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(870): ApiController->renderFile()
+#3 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(148): ApiController->renderPartial()
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionSample()
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): ApiController->runAction()
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#9 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#10 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CWebApplication->run()
+REQUEST_URI=/api/sample/Triti
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php (11)
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php (148)
+in /var/www/hosts/gigadb.cogini.com/htdocs/index.php (15)
+2014/02/26 15:12:35 [error] [php] Trying to get property of non-object (/var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php:11)
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(870): ApiController->renderFile()
+#1 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(148): ApiController->renderPartial()
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionSample()
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): ApiController->runAction()
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CWebApplication->run()
+REQUEST_URI=/api/sample/Triti
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php (11)
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php (148)
+in /var/www/hosts/gigadb.cogini.com/htdocs/index.php (15)
+2014/02/26 15:22:00 [error] [php] Trying to get property of non-object (/var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php:11)
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(870): ApiController->renderFile()
+#1 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(148): ApiController->renderPartial()
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionSample()
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): ApiController->runAction()
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CWebApplication->run()
+REQUEST_URI=/api/sample/Triti
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php (11)
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php (148)
+in /var/www/hosts/gigadb.cogini.com/htdocs/index.php (15)
+2014/02/26 15:22:01 [error] [php] Trying to get property of non-object (/var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php:11)
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(870): ApiController->renderFile()
+#1 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(148): ApiController->renderPartial()
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionSample()
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): ApiController->runAction()
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CWebApplication->run()
+REQUEST_URI=/api/sample/Triti
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php (11)
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php (148)
+in /var/www/hosts/gigadb.cogini.com/htdocs/index.php (15)
+2014/02/26 15:22:02 [error] [php] Trying to get property of non-object (/var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php:11)
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(870): ApiController->renderFile()
+#1 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(148): ApiController->renderPartial()
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionSample()
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): ApiController->runAction()
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CWebApplication->run()
+REQUEST_URI=/api/sample/Triti
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php (11)
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php (148)
+in /var/www/hosts/gigadb.cogini.com/htdocs/index.php (15)
+2014/02/26 15:22:14 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (/var/www/hosts/gigadb.cogini.com/yii/framework/web/helpers/CHtml.php:85)
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CBaseController.php(127): require()
+#1 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CBaseController.php(96): ApiController->renderInternal()
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(870): ApiController->renderFile()
+#3 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(148): ApiController->renderPartial()
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionSample()
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): ApiController->runAction()
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#9 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#10 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CWebApplication->run()
+REQUEST_URI=/api/sample/Triti
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php (11)
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php (148)
+in /var/www/hosts/gigadb.cogini.com/htdocs/index.php (15)
+2014/02/26 15:23:26 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (/var/www/hosts/gigadb.cogini.com/yii/framework/web/helpers/CHtml.php:85)
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CBaseController.php(127): require()
+#1 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CBaseController.php(96): ApiController->renderInternal()
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(870): ApiController->renderFile()
+#3 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(148): ApiController->renderPartial()
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionSample()
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): ApiController->runAction()
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#9 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#10 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CWebApplication->run()
+REQUEST_URI=/api/sample/Triti
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php (11)
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php (148)
+in /var/www/hosts/gigadb.cogini.com/htdocs/index.php (15)
+2014/02/26 15:25:13 [error] [php] Object of class CActiveRecordMetaData could not be converted to string (/var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php:11)
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(870): ApiController->renderFile()
+#1 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(148): ApiController->renderPartial()
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionSample()
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): ApiController->runAction()
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CWebApplication->run()
+REQUEST_URI=/api/sample/Triti
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php (11)
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php (148)
+in /var/www/hosts/gigadb.cogini.com/htdocs/index.php (15)
+2014/02/26 15:26:59 [error] [php] Undefined offset: 0 (/var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php:11)
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(870): ApiController->renderFile()
+#1 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(148): ApiController->renderPartial()
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionSample()
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): ApiController->runAction()
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CWebApplication->run()
+REQUEST_URI=/api/sample/Triti
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php (11)
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php (148)
+in /var/www/hosts/gigadb.cogini.com/htdocs/index.php (15)
+2014/02/26 15:27:08 [error] [php] Undefined offset: 1 (/var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php:11)
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(870): ApiController->renderFile()
+#1 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(148): ApiController->renderPartial()
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionSample()
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): ApiController->runAction()
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CWebApplication->run()
+REQUEST_URI=/api/sample/Triti
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php (11)
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php (148)
+in /var/www/hosts/gigadb.cogini.com/htdocs/index.php (15)
+2014/02/26 15:28:09 [error] [php] Trying to get property of non-object (/var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php:11)
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(870): ApiController->renderFile()
+#1 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(148): ApiController->renderPartial()
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionSample()
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): ApiController->runAction()
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CWebApplication->run()
+REQUEST_URI=/api/sample/Triti
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php (11)
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php (148)
+in /var/www/hosts/gigadb.cogini.com/htdocs/index.php (15)
+2014/02/26 15:28:11 [error] [php] Trying to get property of non-object (/var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php:11)
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(870): ApiController->renderFile()
+#1 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(148): ApiController->renderPartial()
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionSample()
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): ApiController->runAction()
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CWebApplication->run()
+REQUEST_URI=/api/sample/Triti
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php (11)
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php (148)
+in /var/www/hosts/gigadb.cogini.com/htdocs/index.php (15)
+2014/02/26 15:29:06 [error] [php] Trying to get property of non-object (/var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php:11)
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(870): ApiController->renderFile()
+#1 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(148): ApiController->renderPartial()
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionSample()
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): ApiController->runAction()
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CWebApplication->run()
+REQUEST_URI=/api/sample/Triti
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php (11)
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php (148)
+in /var/www/hosts/gigadb.cogini.com/htdocs/index.php (15)
+2014/02/26 15:59:12 [error] [php] Trying to get property of non-object (/var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php:11)
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(870): ApiController->renderFile()
+#1 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(148): ApiController->renderPartial()
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionSample()
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): ApiController->runAction()
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CWebApplication->run()
+REQUEST_URI=/api/sample/Triti
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php (11)
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php (148)
+in /var/www/hosts/gigadb.cogini.com/htdocs/index.php (15)
+2014/02/26 16:34:08 [error] [php] Trying to get property of non-object (/var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php:11)
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(870): ApiController->renderFile()
+#1 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(148): ApiController->renderPartial()
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionSample()
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): ApiController->runAction()
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CWebApplication->run()
+REQUEST_URI=/api/sample/Homo
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php (11)
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php (148)
+in /var/www/hosts/gigadb.cogini.com/htdocs/index.php (15)
+2014/02/26 16:34:11 [error] [php] Trying to get property of non-object (/var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php:11)
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(870): ApiController->renderFile()
+#1 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(148): ApiController->renderPartial()
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionSample()
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): ApiController->runAction()
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CWebApplication->run()
+REQUEST_URI=/api/sample/Homo
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php (11)
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php (148)
+in /var/www/hosts/gigadb.cogini.com/htdocs/index.php (15)
+2014/02/26 16:46:40 [error] [php] Trying to get property of non-object (/var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php:11)
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(870): ApiController->renderFile()
+#1 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(148): ApiController->renderPartial()
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionSample()
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): ApiController->runAction()
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CWebApplication->run()
+REQUEST_URI=/api/sample/Homo
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php (11)
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php (148)
+in /var/www/hosts/gigadb.cogini.com/htdocs/index.php (15)
+2014/02/26 16:46:42 [error] [php] Trying to get property of non-object (/var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php:11)
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(870): ApiController->renderFile()
+#1 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(148): ApiController->renderPartial()
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionSample()
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): ApiController->runAction()
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CWebApplication->run()
+REQUEST_URI=/api/sample/Homo
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php (11)
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php (148)
+in /var/www/hosts/gigadb.cogini.com/htdocs/index.php (15)
+2014/02/26 16:47:02 [error] [php] Trying to get property of non-object (/var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php:11)
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(870): ApiController->renderFile()
+#1 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(148): ApiController->renderPartial()
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionSample()
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): ApiController->runAction()
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CWebApplication->run()
+REQUEST_URI=/api/sample/Homo
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php (11)
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php (148)
+in /var/www/hosts/gigadb.cogini.com/htdocs/index.php (15)
+2014/02/26 16:47:17 [error] [php] Trying to get property of non-object (/var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php:11)
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(870): ApiController->renderFile()
+#1 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(148): ApiController->renderPartial()
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionSample()
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): ApiController->runAction()
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CWebApplication->run()
+REQUEST_URI=/api/sample/Homo
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php (11)
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php (148)
+in /var/www/hosts/gigadb.cogini.com/htdocs/index.php (15)
+2014/02/26 16:52:00 [error] [php] Trying to get property of non-object (/var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php:11)
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(870): ApiController->renderFile()
+#1 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(148): ApiController->renderPartial()
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionSample()
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): ApiController->runAction()
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CWebApplication->run()
+REQUEST_URI=/api/sample/Homo
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php (11)
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php (148)
+in /var/www/hosts/gigadb.cogini.com/htdocs/index.php (15)
+2014/02/26 16:52:03 [error] [php] Trying to get property of non-object (/var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php:11)
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(870): ApiController->renderFile()
+#1 /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php(148): ApiController->renderPartial()
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionSample()
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(287): ApiController->runAction()
+#5 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CWebApplication->run()
+REQUEST_URI=/api/sample/Homo
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/views/api/view_samples_dois.php (11)
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/ApiController.php (148)
+in /var/www/hosts/gigadb.cogini.com/htdocs/index.php (15)
+2014/03/03 09:23:33 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[08006] [7] could not connect to server: Connection refused
+	Is the server running on host "localhost" (::1) and accepting
+	TCP/IP connections on port 5432?
+could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?' in /var/www/hosts/gigadb.cogini.com/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /var/www/hosts/gigadb.cogini.com/yii/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /var/www/hosts/gigadb.cogini.com/yii/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CModule.php(388): CDbConnection->init()
+#3 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CDbHttpSession.php(154): CModule->getComponent('db')
+#4 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CDbHttpSession.php(178): CDbHttpSession->getDbConnection()
+#5 [internal function]: CDbHttpSession->openSession('/var/lib/php/se...', 'PHPSESSID')
+#6 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CHttpSession.php(115): session_start()
+#7 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CHttpSession.php(89): CHttpSession->open()
+#8 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CModule.php(388): CHttpSession->init()
+#9 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CModule.php(104): CModule->getComponent('session')
+#10 /var/www/hosts/gigadb.cogini.com/htdocs/protected/components/Controller.php(50): CModule->__get('session')
+#11 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(275): Controller->init()
+#12 /var/www/hosts/gigadb.cogini.com/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('')
+#13 /var/www/hosts/gigadb.cogini.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#14 /var/www/hosts/gigadb.cogini.com/htdocs/index.php(15): CApplication->run()
+#15 {main}
+REQUEST_URI=/
+---
+2014/03/03 09:23:58 [debug] [application]     .... 
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/views/dataset/view.php (222)
+in /var/www/hosts/gigadb.cogini.com/htdocs/protected/controllers/DatasetController.php (140)
+in /var/www/hosts/gigadb.cogini.com/htdocs/index.php (15)

@@ -97,7 +97,8 @@ class ApiController extends Controller
                 $model = Dataset::model()->with('authors')->findByAttributes(array('identifier'=>$_GET['id']));
                 break;
             case 'sample':
-                $model = Sample::model()->findByPk($_GET['id']);
+                //$model = Sample::model()->findByPk($_GET['id']);
+                $model = Sample::model()->with('datasetSamples','species','datasets')->findAll(array('condition'=>'scientific_name like :name','params'=>array(':name'=>'%'.$_GET['id']."%")));                
                 break;                
             default:
                 $this->_sendResponse(501, sprintf(
@@ -120,7 +121,35 @@ class ApiController extends Controller
             $this->renderPartial('view_sample',array('model'=>$model));
         }
     }
-    
+
+            // Actions
+    public function actionSample()
+    {
+        // Get the respective model instance
+        switch($_GET['action'])
+        {
+            case 'sample':
+                $models = Dataset::model()->with('samples','samples.species')->findAll(array('condition'=>'scientific_name like :name','params'=>array(':name'=>'%'.$_GET['name']."%")));                
+                break;
+            default:
+                // Model not implemented error
+                $this->_sendResponse(501, sprintf(
+                    'Error: Mode <b>list</b> is not implemented for model <b>%s</b>',
+                    $_GET['action']) );
+                Yii::app()->end();
+        }
+        // Did we get some results?
+        if(empty($models)) {
+            // No
+            $this->_sendResponse(200, 
+                    sprintf('No items where found for for for model <b>%s</b>', $_GET['action']) );
+        } else {
+            if($_GET['action']=='sample'){         
+                $this->renderPartial('view_datasets',array('models'=>$models));
+            }
+            }
+    }    
+  
         // Actions
     public function actionAuthor()
     {
@@ -143,12 +172,6 @@ class ApiController extends Controller
             $this->_sendResponse(200, 
                     sprintf('No items where found for for for model <b>%s</b>', $_GET['action']) );
         } else {
-            // Prepare response
-            //$rows = array();
-            //foreach($models as $model)
-            //    $rows[] = $model->attributes;
-            // Send the response
-            //$this->_sendResponse(200, CJSON::encode($rows));
             if($_GET['action']=='author'){         
                 $this->renderPartial('view_datasets',array('models'=>$models));
             }
