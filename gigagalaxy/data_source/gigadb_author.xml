@@ -1,0 +1,31 @@
+<tool id="gigadb_author" name="gigadb_author" version="1.0" force_history_refresh="true">
+    <description>GigaDB Data by Author </description>
+    <requirements>
+<requirement type="package"></requirement>
+    </requirements>
+    <command interpreter="python">
+        gigadb_author.py $author
+        ## Output files
+        $gigadboutput.id $__new_file_path__ $gigadboutput 
+    </command>
+    <inputs>
+        <param name="author"
+              type="text"
+              format="input"
+              label="author"
+              value="Luo"/>
+    </inputs>
+    <outputs>
+        <data name="gigadboutput"
+              type="data"
+              format="txt"
+              label="out">
+        </data>
+    </outputs>
+    <tests>
+        <test>
+        </test>
+    </tests>
+    <help>
+    </help>
+</tool>

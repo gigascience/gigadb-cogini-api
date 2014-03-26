@@ -1,0 +1,31 @@
+<tool id="gigadb_keyword" name="gigadb_keyword" version="1.0" force_history_refresh="true">
+    <description>GigaDB Data by Keyword </description>
+    <requirements>
+<requirement type="package"></requirement>
+    </requirements>
+    <command interpreter="python">
+        gigadb_keyword.py $keyword
+        ## Output files
+        $gigadboutput.id $__new_file_path__ $gigadboutput 
+    </command>
+    <inputs>
+        <param name="keyword"
+              type="text"
+              format="input"
+              label="keyword"
+              value="Potato"/>
+    </inputs>
+    <outputs>
+        <data name="gigadboutput"
+              type="data"
+              format="txt"
+              label="out">
+        </data>
+    </outputs>
+    <tests>
+        <test>
+        </test>
+    </tests>
+    <help>
+    </help>
+</tool>

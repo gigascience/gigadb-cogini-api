@@ -1,0 +1,31 @@
+<tool id="gigadb_sample" name="gigadb_sample" version="1.0" force_history_refresh="true">
+    <description>GigaDB Data by Sample </description>
+    <requirements>
+<requirement type="package"></requirement>
+    </requirements>
+    <command interpreter="python">
+        gigadb_sample.py $sample
+        ## Output files
+        $gigadboutput.id $__new_file_path__ $gigadboutput 
+    </command>
+    <inputs>
+        <param name="sample"
+              type="text"
+              format="input"
+              label="sample"
+              value="Pan"/>
+    </inputs>
+    <outputs>
+        <data name="gigadboutput"
+              type="data"
+              format="txt"
+              label="out">
+        </data>
+    </outputs>
+    <tests>
+        <test>
+        </test>
+    </tests>
+    <help>
+    </help>
+</tool>

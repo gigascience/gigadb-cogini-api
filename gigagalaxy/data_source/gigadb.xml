@@ -1,0 +1,31 @@
+<tool id="gigadb" name="gigadb" version="1.0" force_history_refresh="true">
+    <description>GigaDB test </description>
+    <requirements>
+<requirement type="package"></requirement>
+    </requirements>
+    <command interpreter="python">
+        gigadb.py $doi
+        ## Output files
+        $gigadboutput.id $__new_file_path__ $gigadboutput 
+    </command>
+    <inputs>
+        <param name="doi"
+              type="text"
+              format="input"
+              label="DOI"
+              value="100011"/>
+    </inputs>
+    <outputs>
+        <data name="gigadboutput"
+              type="data"
+              format="txt"
+              label="out">
+        </data>
+    </outputs>
+    <tests>
+        <test>
+        </test>
+    </tests>
+    <help>
+    </help>
+</tool>
