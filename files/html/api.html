@@ -3,8 +3,13 @@
 <div class="clear"></div>
 <div class="row">
 <div class="span">
-    <p>This document describes the REST API URLs that we implemented for GigaDB. The XML schema is available <a href="">here</a>.   
+    <p>This document describes the REST API URLs that we implemented for GigaDB.  
     </p>
+        <h3>Query the dataset by keyword</h3>   
+        <p>Please use the following URL syntax to query dataset by keyword,<br/>            
+        http://gigadb.org/api/keyword/<keyword> <br/>
+        For example, the URL <a href="http://localhost/api/keyword/Homo">http://gigadb.org/api/keyword/Homo</a> will return a dataset associated with DOI 100039.
+        </p>
     <h3>Query the dataset by DOI</h3>   
         <p>Please use the following URL syntax to query dataset by DOI,<br/>            
         http://gigadb.org/api/dataset/<DOI> <br/>

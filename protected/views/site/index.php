@@ -1,5 +1,3 @@
-<?php echo $this->pageTitle = Yii::app()->name ?>
-
 <p style="text-align:center"><i><?php echo $this->renderInternal('Yii::app()->basePath'.'/../files/html/gigadb.html'); ?></i></p>
 <p>
 <?php echo $this->renderPartial('/search/_form',array('model'=>$form,'dataset'=>$dataset,'search_result'=>null)); ?>

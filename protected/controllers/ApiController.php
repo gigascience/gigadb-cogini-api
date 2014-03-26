@@ -50,16 +50,18 @@ class ApiController extends Controller
                 break;
             default:
                 // Model not implemented error
-                $this->_sendResponse(501, sprintf(
-                    'Error: Mode <b>list</b> is not implemented for model <b>%s</b>',
-                    $_GET['model']) );
+               // $this->_sendResponse(501, sprintf(
+                   // 'Error: Mode <b>list1</b> is not implemented for model <b>%s</b>',
+                 //   $_GET['model']) );
+                $this->renderPartial('view_empty');
                 Yii::app()->end();
         }
         // Did we get some results?
         if(empty($models)) {
             // No
-            $this->_sendResponse(200, 
-                    sprintf('No items where found for model <b>%s</b>', $_GET['model']) );
+            //$this->_sendResponse(200, 
+              //      sprintf('No items where found for model <b>%s</b>', $_GET['model']) );
+            $this->renderPartial('view_empty');
         } else {
             // Prepare response
             //$rows = array();
@@ -101,9 +103,10 @@ class ApiController extends Controller
                 $model = Sample::model()->with('datasetSamples','species','datasets')->findAll(array('condition'=>'scientific_name like :name','params'=>array(':name'=>'%'.$_GET['id']."%")));                
                 break;                
             default:
-                $this->_sendResponse(501, sprintf(
-                    'Mode <b>view</b> is not implemented for model <b>%s</b>',
-                    $_GET['model']) );
+                //$this->_sendResponse(501, sprintf(
+                  //  'Mode <b>view</b> is not implemented for model <b>%s</b>',
+                  //  $_GET['model']) );
+                $this->renderPartial('view_empty');
                 Yii::app()->end();
         }
         // Did we find the requested model? If not, raise an error
@@ -122,10 +125,24 @@ class ApiController extends Controller
         }
     }
 
-            // Actions
+    // Actions
     public function actionSample()
     {
         // Get the respective model instance
+        $models = Dataset::model()->with('samples','samples.species')->findAll(array('condition'=>'scientific_name like :name','params'=>array(':name'=>'%'.$_GET['name']."%")));                
+        // Did we get some results?
+        if(empty($models)) {
+            // No
+            //$this->_sendResponse(200, 
+              //      sprintf('No items where found for for for model <b>%s</b>', $_GET['action']) );
+            $this->renderPartial('view_empty');
+        } else {       
+            $this->renderPartial('view_datasets',array('models'=>$models));
+            
+        }                
+        
+        
+        /*
         switch($_GET['action'])
         {
             case 'sample':
@@ -134,10 +151,11 @@ class ApiController extends Controller
             default:
                 // Model not implemented error
                 $this->_sendResponse(501, sprintf(
-                    'Error: Mode <b>list</b> is not implemented for model <b>%s</b>',
+                    'Error: Mode <b>list_sample</b> is not implemented for model <b>%s</b>',
                     $_GET['action']) );
                 Yii::app()->end();
         }
+
         // Did we get some results?
         if(empty($models)) {
             // No
@@ -148,8 +166,38 @@ class ApiController extends Controller
                 $this->renderPartial('view_datasets',array('models'=>$models));
             }
             }
+         * 
+         */
     }    
+    
+    public function actionKeyword()
+    {
+        // Get the respective model instance
+        $keyword = $_GET['keyword'];
+        //print $keyword;
+        $models=  $this->getFullDatasetResultByKeyword($keyword);
+        //print_r($models);
+        if(empty($models)) {
+            // No
+            //$this->_sendResponse(200, 
+            //        sprintf('No items where found for for for model <b>%s</b>', $_GET['keyword']) );
+            $this->renderPartial('view_empty');
+        } else {
+            $this->renderPartial('view_datasets',array('models'=>$models));
+        }
+    }
   
+     private function getFullDatasetResultByKeyword($keyword) {
+        $wordCriteria=array();
+        $wordCriteria['keyword']=$keyword;
+        $list_result_dataset_criteria = Dataset::sphinxSearch($wordCriteria);
+        //print_r($wordCriteria);
+        //print_r($list_result_dataset_criteria);
+        $temp_dataset_criteria = new CDbCriteria();
+        $temp_dataset_criteria->addInCondition("id", $list_result_dataset_criteria);
+        //print_r($temp_dataset_criteria);
+        return Dataset::model()->findAll($temp_dataset_criteria);
+    }
         // Actions
     public function actionAuthor()
     {
@@ -161,16 +209,18 @@ class ApiController extends Controller
                 break;
             default:
                 // Model not implemented error
-                $this->_sendResponse(501, sprintf(
-                    'Error: Mode <b>list</b> is not implemented for model <b>%s</b>',
-                    $_GET['action']) );
+               // $this->_sendResponse(501, sprintf(
+                 //   'Error: Mode <b>list</b> is not implemented for model <b>%s</b>',
+                   // $_GET['action']) );
+                $this->renderPartial('view_empty');
                 Yii::app()->end();
         }
         // Did we get some results?
         if(empty($models)) {
             // No
-            $this->_sendResponse(200, 
-                    sprintf('No items where found for for for model <b>%s</b>', $_GET['action']) );
+            //$this->_sendResponse(200, 
+              //      sprintf('No items where found for for for model <b>%s</b>', $_GET['action']) );
+            $this->renderPartial('view_empty');
         } else {
             if($_GET['action']=='author'){         
                 $this->renderPartial('view_datasets',array('models'=>$models));

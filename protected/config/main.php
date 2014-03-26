@@ -84,7 +84,8 @@ return CMap::mergeArray(array(
                 // REST patterns
                 array('api/list', 'pattern'=>'api/<model:\w+>', 'verb'=>'GET'),                
                 array('api/view', 'pattern'=>'api/<model:\w+>/<id:\d+>', 'verb'=>'GET'),
-                array('api/sample', 'pattern'=>'api/<action:\w+>/<name>', 'verb'=>'GET'),
+                array('api/sample', 'pattern'=>'api/sample/<name>', 'verb'=>'GET'),
+                array('api/keyword', 'pattern'=>'api/keyword/<keyword>', 'verb'=>'GET'),
                 array('api/author', 'pattern'=>'api/<action:\w+>/<name>', 'verb'=>'GET'),
                 array('api/update', 'pattern'=>'api/<model:\w+>/<id:\d+>', 'verb'=>'PUT'),
                 array('api/delete', 'pattern'=>'api/<model:\w+>/<id:\d+>', 'verb'=>'DELETE'),
@@ -102,17 +103,17 @@ return CMap::mergeArray(array(
         'log'=>array(
             'class'=>'CLogRouter',
             'routes'=>array(
-                   
+                   /*
                 array(
                     'class'=>'CFileLogRoute',
                     'levels'=>'error, warning, info, debug',
                 ),
-             /*
+             
                 array(
                     'class'=>'CWebLogRoute',
                 ),
-                 * 
-                 */
+                    * 
+                    */
             ),
         ),
         'messages'=>array(

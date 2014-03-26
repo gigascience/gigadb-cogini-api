@@ -20,7 +20,7 @@
         echo "<Images>";
         echo "<".str_replace(" ", "", CHtml::encode($model->image->getAttributeLabel('location'))).">"; 
         echo CHtml::encode($model->image->location);
-        echo "</".str_replace(" ", "", CHtml::encode($model->image->getAttributeLabel('location'))).">"; 
+        echo "</".str_replace(" ", "", CHtml::encode($model->image->getAttributeLabel('location'))).">";
         echo "<".str_replace(" ", "", CHtml::encode($model->image->getAttributeLabel('photographer'))).">"; 
         echo CHtml::encode($model->image->photographer);
         echo "</".str_replace(" ", "", CHtml::encode($model->image->getAttributeLabel('photographer'))).">";
