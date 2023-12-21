@@ -1,2 +1,0 @@
-gigadb-cogini-api
-=================
